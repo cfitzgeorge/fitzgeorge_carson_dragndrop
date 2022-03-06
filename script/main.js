@@ -12,6 +12,7 @@
     puzzlePaths.forEach((img, index) => {
         puzzlePieces[index].src = `images/${img + this.dataset.bgref}.jpg`;
     });
+
     }
     function dragStarted(event) {
         console.log('started dragging a piece');
@@ -31,11 +32,19 @@
         this.appendChild(document.querySelector(`#${droppedEl}`));
     }
 
+    function resetPuzzlePieces() {
+        console.log("wow! you did a thing!")
+        /* i tried experimenting with reloading the page. It reset the puzzle pieces, of course, but it wouldn't let me change the thumbnail:
+        window.location.reload(); */
+    }
+
     theThumbnails.forEach(item => item.addEventListener("click", changeBGImg));
     puzzlePieces.forEach(piece => piece.addEventListener("dragstart", dragStarted));
     dropZone.forEach(zone => {
         zone.addEventListener("dragover", allowDragOver);
         zone.addEventListener("drop", allowDrop);
-    });
+    });    
     
+/* event handling for the reset */
+    theThumbnails.forEach(item => item.addEventListener("click"), resetPuzzlePieces);
 })()
