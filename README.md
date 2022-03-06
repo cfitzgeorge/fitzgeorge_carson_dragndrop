@@ -19,4 +19,4 @@ Unzip the files and open the index.html file.
 ## License
 Made by Carson Fitzgeorge
 
-Made with [Visual Studio Code]https://code.visualstudio.com/
+Made with [Visual Studio Code](https://code.visualstudio.com/)
